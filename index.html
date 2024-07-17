@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Custos de Projeto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="costCalculator">
+            <h1>Calculadora de Custos de Projeto</h1>
+            <label for="moduleName">Nome do Módulo:</label>
+            <input type="text" id="moduleName" required>
+
+            <label for="segment">Segmento:</label>
+            <select id="segment" required>
+                <option value="Mobile">Mobile</option>
+                <option value="Web">Web</option>
+                <option value="Desktop">Desktop</option>
+                <option value="Server">Servidor (API)</option>
+            </select>
+
+            <label for="screens">Número de Telas/Funcionalidades:</label>
+            <input type="number" id="screens" required value="0" min="1">
+            
+            <label for="hoursPerScreen">Horas por Tela/Funcionalidade:</label>
+            <input type="number" id="hoursPerScreen" value="0" required min="1">
+
+            <label for="hourlyRate">Valor por Hora (R$):</label>
+            <input type="number" id="hourlyRate" value="0" required min="1">
+
+            <label for="backendHours">Horas de Desenvolvimento Back-end:</label>
+            <input type="number" id="backendHours" required value="0">
+
+            <label for="serverHours">Horas de Configuração do Servidor:</label>
+            <input type="number" id="serverHours" required value="0">
+
+            <label for="qaPercentage">Percentual de Horas para QA e Testes (%)</label>
+            <input type="number" id="qaPercentage" value="20" required>
+            <!-- <p>Inclua aqui a porcentagem do tempo total de desenvolvimento que será dedicada à garantia de qualidade e testes.</p> -->
+            
+            <label for="profitMargin">Margem de Lucro (%):</label>
+            <input type="number" id="profitMargin" value="10" required>
+            
+            <button type="button" onclick="addModule()">Adicionar Módulo</button>
+            <button type="button" onclick="calculateTotalCost()">Calcular Total</button>
+        </form>
+
+        <div class="result" id="result">
+            <center>
+                <h1>Resultado</h1>    
+            </center>
+            <div id="modules" class="module-list"></div>
+            <div id="totalResult"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

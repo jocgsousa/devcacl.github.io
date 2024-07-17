@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+form {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 50%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    color: #555;
+}
+
+input, select {
+    width: calc(100% - 20px);
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 20px;
+}
+
+button {
+    display: block;
+    width: 98%;
+    /* padding: 10px; */
+    margin-top: 20px;
+    height: 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+    max-width: 50%;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.result h2 {
+    color: #333;
+}
+
+.result p {
+    color: #555;
+}
+
+.module-list {
+    margin-top: 20px;
+}
+
+.module-item {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
